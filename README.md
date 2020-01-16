@@ -287,7 +287,15 @@ sudo python setup.py install
 
 ## Configure the environment variables.
 ```
+Make sure you run:
 cd ~/github/models/
+From tensorflow/models/research/
+protoc object_detection/protos/*.proto --python_out=.
+
+From tensorflow/models/research/
+export PYTHONPATH=$PYTHONPATH:pwd:pwd/slim
+
+
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/research/slim:`pwd`/research:
 ```
 
